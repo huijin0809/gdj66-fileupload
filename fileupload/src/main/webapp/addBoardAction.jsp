@@ -8,6 +8,8 @@
 <%@ page import="java.net.*" %>
 <%@ page import="java.sql.*" %>
 <%
+	request.setCharacterEncoding("utf-8");
+
 	// 1. 세션 유효성 검사 // 세션값이 없으면 파일 업로드 페이지에 올 수 없다
 	if(session.getAttribute("loginMemberId") == null) {
 		response.sendRedirect(request.getContextPath()+"/login.jsp");
